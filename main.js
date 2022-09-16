@@ -4,6 +4,8 @@ var $addEntryForm = document.querySelector('.add-entry-form');
 var $weekdayBoxesContainer = document.querySelector('.weekday-boxes-container');
 var $weekdayBoxes = document.querySelectorAll('.column-seventh');
 var $span = document.querySelector('span');
+var $tbody = document.querySelector('tbody');
+var newEntry = {};
 
 var data = {
   sunday: {
@@ -48,7 +50,7 @@ $addEntry.addEventListener('click', function (event) {
 $addEntryForm.addEventListener('submit', function (event) {
   event.preventDefault();
 
-  var newEntry = {
+  newEntry = {
     time: document.querySelector('#time').value,
     description: document.querySelector('#description').value
   };
@@ -57,6 +59,8 @@ $addEntryForm.addEventListener('submit', function (event) {
   data[day].entries.push(newEntry);
 
   $modalContainer.className = 'modal-conatiner hidden';
+
+  createDomTree(newEntry);
 });
 
 $weekdayBoxesContainer.addEventListener('click', function (event) {
@@ -70,3 +74,15 @@ $weekdayBoxesContainer.addEventListener('click', function (event) {
     event.target.className = 'column-seventh chosen-day';
   }
 });
+
+function createDomTree(entry) {
+  var $tr = document.createElement('tr');
+  $tbody.appendChild($tr);
+  var $tdTime = document.createElement('td');
+  $tdTime.textContent = entry.time;
+  $tr.appendChild($tdTime);
+  var $tdDescription = document.createElement('td');
+  $tdDescription.textContent = entry.description;
+  $tr.appendChild($tdDescription);
+  return $tr;
+}
