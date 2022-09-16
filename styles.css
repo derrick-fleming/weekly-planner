@@ -12,6 +12,7 @@ h2 {
   text-align: center;
 }
 
+.submit,
 .add-entry {
   font-family: Kanit, sans-serif;
   color: #fff;
@@ -20,10 +21,6 @@ h2 {
   border: none;
   border-radius: 5px;
   margin-top: 4rem;
-}
-
-.add-entry:hover {
-  cursor: pointer;
 }
 
 .modal-container {
@@ -38,4 +35,47 @@ h2 {
 
 .modal {
   position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 30rem;
+  height: 17rem;
+  padding: 0 1rem;
+  border-radius: 5px;
+}
+
+select {
+  margin-bottom: 1rem;
+  font-family: Kanit, sans-serif;
+}
+
+select:last-child {
+  margin-left: 1rem;
+}
+
+textarea {
+  height: 4rem;
+  width: 100%;
+  padding: 0.3rem;
+  resize: none;
+}
+
+.submit {
+  margin-top: 1rem;
+}
+
+.add-entry:hover,
+.submit:hover {
+  cursor: pointer;
+}
+
+.submit-container {
+  text-align: right;
+}
+
+select:focus,
+textarea:focus {
+  border-color: #836dde;
+  outline-color: #836dde;
 }
