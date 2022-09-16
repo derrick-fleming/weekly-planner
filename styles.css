@@ -115,3 +115,7 @@ tr:nth-child(even) {
 td {
   padding-left: 0.5rem;
 }
+
+.chosen-day {
+  background-color: lightgrey;
+}
