@@ -3,7 +3,8 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h4 {
   text-align: center;
   font-family: Kanit, sans-serif;
 }
@@ -20,7 +21,7 @@ h2 {
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 5px;
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 
 .modal-container {
@@ -82,4 +83,21 @@ textarea:focus {
 
 .hidden {
   display: none;
+}
+
+table {
+  border: 1px solid black;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th {
+  text-align: left;
+  background-color: #4e4b5e;
+  color: white;
+}
+
+tr {
+
 }
