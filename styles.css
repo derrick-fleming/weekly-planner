@@ -79,3 +79,7 @@ textarea:focus {
   border-color: #836dde;
   outline-color: #836dde;
 }
+
+.hidden {
+  display: none;
+}
