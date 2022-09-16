@@ -53,11 +53,8 @@ $addEntryForm.addEventListener('submit', function (event) {
     description: document.querySelector('#description').value
   };
 
-  for (var key in data) {
-    if (data[key] === document.querySelector('#day-of-week').value) {
-      data[key].entries.push(newEntry);
-    }
-  }
+  var day = document.querySelector('#day-of-week').value;
+  data[day].entries.push(newEntry);
 
   $modalContainer.className = 'modal-conatiner hidden';
 });
